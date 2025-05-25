@@ -22,13 +22,13 @@ const ThemeToggle = () => {
       {theme === "dark" ? (
         <IconSun
           stroke={1.5}
-          className="text-foreground/70 duration-150 group-hover:text-foreground"
+          className="text-foreground/70 duration-150 group-hover:text-aqyre-primary"
           size={20}
         />
       ) : (
         <IconMoon
           stroke={1.5}
-          className="text-foreground/70 duration-150 group-hover:text-foreground"
+          className="text-foreground/70 duration-150 group-hover:text-aqyre-primary"
           size={20}
         />
       )}

@@ -2,16 +2,16 @@
 
 import Link from "next/link";
 import React, { useState } from "react";
-import Logo from "./utility/logo";
+import Logo from "../utility/logo";
 import { IconBrandGithub, IconMenu } from "@tabler/icons-react";
-import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 import { DialogTitle } from "@radix-ui/react-dialog";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { SidebarProps } from "@/types";
 import { NavList, SidebarData } from "@/constant";
-import ThemeToggle from "./utility/theme-toggle";
-import GlobalSearch from "./utility/global-search";
+import ThemeToggle from "../utility/theme-toggle";
+import GlobalSearch from "../utility/global-search";
 
 const SidebarHeader = ({ text }: { text: string }) => {
   return <h4 className="font-medium tracking-wide px-4 my-2">{text}</h4>;
@@ -133,7 +133,7 @@ const Navbar = () => {
             <IconBrandGithub
               size={20}
               stroke={1.5}
-              className="text-foreground/70 duration-150 group-hover:text-foreground"
+              className="text-foreground/70 duration-150 group-hover:text-aqyre-primary"
             />
           </Link>
           <MobileNav />
