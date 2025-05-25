@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/components/providers/theme-provider";
+import Navbar from "@/components/Navbar";
 
 const Bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -66,7 +68,15 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${Bricolage.variable} ${Jetbrains.variable}`}>
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Navbar />
+          <main className="max-w-[1400px] mx-auto p-4">{children}</main>
+        </ThemeProvider>
       </body>
     </html>
   );
