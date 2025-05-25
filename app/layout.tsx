@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Bricolage_Grotesque, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/providers/theme-provider";
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/sections/Navbar";
 
 const Bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
