@@ -18,7 +18,7 @@ const MobileNav = () => {
       <SheetTrigger className="w-8 h-8 hidden max-sm:flex items-center justify-center rounded-md cursor-pointer group">
         <IconMenu stroke={1.5} size={20} className="text-foreground/70" />
       </SheetTrigger>
-      <SheetContent className="px-2 pt-10">
+      <SheetContent className="p-6">
         <DialogTitle className="sr-only">Navigation</DialogTitle>
         <MainSidebar data={SidebarData} setOpen={setOpen} />
       </SheetContent>
