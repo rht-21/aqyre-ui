@@ -25,6 +25,11 @@ export const TrackerData = {
     { id: "why-aqyreui", title: "Why Aqyre UI?" },
     { id: "prerequisites", title: "Prerequisites" },
   ],
+  setup: [
+    { id: "overview", title: "Getting Started" },
+    { id: "prerequisites", title: "Install Prerequisites" },
+    { id: "install-tabler", title: "Tabler Icons" },
+  ],
 };
 
 export const Data = {
@@ -80,6 +85,7 @@ export const Data = {
       title: "Tabler Icons",
       description: "Explore Icons",
       href: "https://tabler.io/icons",
+      code: "npm i @tabler/icons-react",
     },
   ],
 };
