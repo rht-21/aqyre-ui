@@ -1,6 +1,7 @@
 import MainSidebar from "@/components/sections/MainSidebar";
 import PathNav from "@/components/utility/path-nav";
 import { SidebarData } from "@/constant";
+import ScrollToTop from "@/hooks/scrollToTop";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -23,6 +24,7 @@ export default function RootLayout({
           id="scrollable-section"
           className="w-full sm:px-8 p-4 h-full overflow-y-auto sm:border-l"
         >
+          <ScrollToTop />
           <PathNav />
           <div className="flex gap-8 relative my-2">{children}</div>
         </section>

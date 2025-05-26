@@ -132,63 +132,66 @@
   h1 {
     @apply text-3xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-semibold;
   }
+  code span {
+    @apply !font-mono;
+  }
 }
 
 @layer components {
   .docs-section {
     @apply py-4 grid grid-cols-1 xl:grid-cols-7 gap-6 w-full overflow-auto;
   }
-  .docs-section > article {
+  .docs-article {
     @apply col-span-5 flex flex-col gap-4;
 
-    & div {
+    .docs-div {
       @apply flex flex-col gap-4 mb-12;
 
-      & h1 {
+      .docs-h1 {
         @apply text-3xl sm:text-4xl font-semibold mt-4;
       }
 
-      & h2 {
+      .docs-h2 {
         @apply text-2xl sm:text-3xl font-semibold;
       }
 
-      & h3 {
+      .docs-h3 {
         @apply text-xl sm:text-2xl font-semibold;
       }
 
-      & h4 {
+      .docs-h4 {
         @apply text-lg sm:text-xl font-semibold;
       }
 
-      & p {
+      .docs-p {
         @apply text-base sm:text-lg text-muted-foreground;
 
-        & span {
+        .docs-span {
           @apply font-medium text-aqyre-primary;
         }
       }
 
-      & ul {
+      .docs-ul {
         @apply py-4 list-inside list-disc space-y-8;
 
-        & h4 {
+        .docs-h4 {
           @apply inline;
         }
 
-        & p {
+        .docs-p {
           @apply w-fit;
         }
       }
 
-      & a {
+      .docs-a {
         @apply text-aqyre-primary duration-200 hover:text-aqyre-primary/70;
       }
     }
   }
-  .docs-section > aside {
+  .docs-aside {
     @apply col-span-2 px-6 max-xl:hidden w-full;
 
-    & section {
+    .docs-aside-section {
       @apply h-60 px-6 fixed top-24;
     }
   }

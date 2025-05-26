@@ -13,8 +13,8 @@ const DocTracker = () => {
   const visibleIds = useActiveSection(ids);
 
   return (
-    <aside>
-      <section>
+    <aside className="docs-aside">
+      <section className="docs-aside-section">
         <p className="font-medium mb-4">On this page</p>
         {sections.map(({ id, title }) => (
           <Link
