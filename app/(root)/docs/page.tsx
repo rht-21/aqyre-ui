@@ -1,3 +1,4 @@
+import DocFooter from "@/components/sections/DocFooter";
 import DocTracker from "@/components/sections/DocTracker";
 import { Data } from "@/constant";
 import Link from "next/link";
@@ -50,6 +51,8 @@ const Docs = () => {
             </p>
           </ul>
         </div>
+
+        <DocFooter />
       </article>
       <DocTracker />
     </section>

@@ -143,46 +143,46 @@
 
     & div {
       @apply flex flex-col gap-4 mb-12;
-    }
 
-    & h1 {
-      @apply text-3xl sm:text-4xl font-semibold mt-4;
-    }
-
-    & h2 {
-      @apply text-2xl sm:text-3xl font-semibold;
-    }
-
-    & h3 {
-      @apply text-xl sm:text-2xl font-semibold;
-    }
-
-    & h4 {
-      @apply text-lg sm:text-xl font-semibold;
-    }
-
-    & p {
-      @apply text-base sm:text-lg text-muted-foreground;
-
-      & span {
-        @apply font-medium text-aqyre-primary;
+      & h1 {
+        @apply text-3xl sm:text-4xl font-semibold mt-4;
       }
-    }
 
-    & ul {
-      @apply py-4 list-inside list-disc space-y-8;
+      & h2 {
+        @apply text-2xl sm:text-3xl font-semibold;
+      }
+
+      & h3 {
+        @apply text-xl sm:text-2xl font-semibold;
+      }
 
       & h4 {
-        @apply inline;
+        @apply text-lg sm:text-xl font-semibold;
       }
 
       & p {
-        @apply w-fit;
-      }
-    }
+        @apply text-base sm:text-lg text-muted-foreground;
 
-    & a {
-      @apply text-aqyre-primary duration-200 hover:text-aqyre-primary/70;
+        & span {
+          @apply font-medium text-aqyre-primary;
+        }
+      }
+
+      & ul {
+        @apply py-4 list-inside list-disc space-y-8;
+
+        & h4 {
+          @apply inline;
+        }
+
+        & p {
+          @apply w-fit;
+        }
+      }
+
+      & a {
+        @apply text-aqyre-primary duration-200 hover:text-aqyre-primary/70;
+      }
     }
   }
   .docs-section > aside {
