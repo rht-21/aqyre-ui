@@ -3,7 +3,6 @@
 import { SidebarData } from "@/constant";
 import { getNextObject } from "@/lib/utils";
 import { IconArrowRight } from "@tabler/icons-react";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 import { RevealButton } from "../core/reveal-button";
