@@ -1,5 +1,5 @@
 import React from "react";
-import { RevealButton } from "../../core/reveal-button";
+import { RevealButton } from "../core/reveal-button";
 import { IconArrowUpRight } from "@tabler/icons-react";
 import { Fade } from "react-awesome-reveal";
 

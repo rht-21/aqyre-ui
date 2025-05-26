@@ -25,7 +25,7 @@ const SidebarItem = ({
       onClick={() => setOpen(false)}
       href={link}
       className={cn(
-        "font-light text-sm p-2 rounded-md duration-150 block hover:bg-muted",
+        "font-light text-sm py-2 px-4 rounded-md duration-150 block hover:bg-muted",
         path === link ? "text-aqyre-primary" : ""
       )}
     >
@@ -46,7 +46,7 @@ const MainSidebar = ({
   return (
     <aside
       className={cn(
-        "max-w-[240px] w-full h-full py-4 flex flex-col justify-start gap-4 overflow-y-auto",
+        "max-w-[200px] w-full h-full py-4 flex flex-col justify-start gap-4",
         className
       )}
     >
