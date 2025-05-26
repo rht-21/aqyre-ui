@@ -14,6 +14,7 @@ import { cn } from "@/lib/utils";
 type CodeBlockProps = {
   language: string;
   hide?: boolean;
+  showLineNumbers?: boolean;
   highlightLines?: number[];
 } & (
   | {
@@ -37,6 +38,7 @@ export const CodeBlock = ({
   hide = false,
   highlightLines = [],
   tabs = [],
+  showLineNumbers = false,
 }: CodeBlockProps) => {
   const [copied, setCopied] = React.useState(false);
   const [hidden, setHidden] = React.useState(true);
@@ -131,14 +133,14 @@ export const CodeBlock = ({
           fontFamily: "monospace",
         }}
         wrapLines={true}
-        showLineNumbers={false}
+        showLineNumbers={showLineNumbers}
         lineProps={(lineNumber: number) => ({
           style: {
             backgroundColor: activeHighlightLines.includes(lineNumber)
               ? "rgba(255,255,255,0.1)"
               : "transparent",
             display: "block",
-            width: "100%",
+            width: "94%",
           },
         })}
         PreTag="div"

@@ -19,7 +19,7 @@ const Docs = () => {
             with sleek, responsive, and ready-to-use components that strike the
             balance between developer speed and design polish.
           </p>
-          <p className="docs-p">
+          <p className="docs-p text-muted-foreground">
             No package installations, no setup fuss — just copy, paste, and
             build.
           </p>
@@ -41,7 +41,7 @@ const Docs = () => {
               )
             )}
           </ul>
-          <p className="docs-p">
+          <p className="docs-p text-muted-foreground">
             Need to customize? All components are built to be extendable and
             easy to tweak.
           </p>
@@ -67,7 +67,7 @@ const Docs = () => {
               )
             )}
           </ul>
-          <p className="docs-p">
+          <p className="docs-p text-muted-foreground">
             Optimized for{" "}
             <Link className="docs-a" href="https://nextjs.org/docs">
               Next.js

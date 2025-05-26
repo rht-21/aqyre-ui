@@ -156,15 +156,15 @@
       }
 
       .docs-h3 {
-        @apply text-xl sm:text-2xl font-semibold;
+        @apply text-xl mt-8 sm:text-2xl font-semibold;
       }
 
       .docs-h4 {
-        @apply text-lg sm:text-xl font-semibold;
+        @apply text-lg mt-8 sm:text-xl font-semibold;
       }
 
       .docs-p {
-        @apply text-base sm:text-lg text-muted-foreground;
+        @apply text-base sm:text-lg text-primary;
 
         .docs-span {
           @apply font-medium text-aqyre-primary;

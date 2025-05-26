@@ -3,14 +3,14 @@ import { SidebarProps } from "@/types";
 export const NavList = [
   { label: "Docs", href: "/docs" },
   { label: "Components", href: "/components" },
-  { label: "Contribute", href: "/contribute" },
+  // { label: "Contribute", href: "/contribute" },
 ];
 
 export const SidebarData: SidebarProps = {
   Docs: [
     { label: "Introduction", href: "/docs" },
     { label: "Installation", href: "/docs/setup", alias: "Getting Started" },
-    { label: "Contribute", href: "/contribute" },
+    // { label: "Contribute", href: "/contribute" },
   ],
 
   Components: [
@@ -28,8 +28,10 @@ export const TrackerData = {
   ],
   setup: [
     { id: "overview", title: "Getting Started" },
-    { id: "prerequisites", title: "Install Prerequisites" },
-    { id: "install-tabler", title: "Tabler Icons" },
+    { id: "requirements", title: "Frameworks and Libraries" },
+    { id: "nextjs-docs", title: "Setup Next.js" },
+    { id: "react-docs", title: "Setup Vite" },
+    { id: "tabler-docs", title: "Tabler Icons" },
   ],
 };
 
@@ -117,5 +119,122 @@ export const Data = {
           "Paste the component into your codebase and tweak classes, props, or animations as needed.",
       },
     ],
+  },
+  installation: {
+    requirements: [
+      {
+        title: "Next.js (Recommended)",
+        description:
+          "Although Aqyre UI works in any React environment, it's optimized for Next.js projects. Ensure you're using Next.js with Node.js v18+ for best performance and compatibility.",
+        href: "nextjs-docs",
+      },
+      {
+        title: "Vite (React)",
+        description:
+          "Aqyre UI components are built using modern React features like hooks and concurrent rendering. Ensure your project is running React version 18 or newer to take full advantage of the library.",
+        href: "react-docs",
+      },
+      {
+        title: "Tabler Icons",
+        description:
+          "Aqyre uses Tabler Icons to provide consistent, lightweight SVG icons. Installation is required for icon-based components to work out-of-the-box.",
+        href: "tabler-docs",
+      },
+    ],
+    vite: {
+      setup: `npm create vite@latest`,
+      tailwind: `npm install tailwindcss @tailwindcss/vite`,
+      css: `@import "tailwindcss";`,
+      tsconfig: `{
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}`,
+      tsconfig_app: `{
+  "compilerOptions": {
+    // ...
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    }
+    // ...
+  }
+}`,
+      types: `npm install -D @types/node`,
+      vite_config: `import path from "path"
+import tailwindcss from "@tailwindcss/vite"
+import react from "@vitejs/plugin-react"
+import { defineConfig } from "vite"
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [react(), tailwindcss()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
+})
+`,
+    },
+    shadcn: {
+      setup: `npx shadcn@latest init`,
+      color: `Which color would you like to use as base color? > Neutral`,
+      component: `npx shadcn@latest add button`,
+      usage: `import { Button } from "@/components/ui/button"
+
+function App() {
+  return (
+    <div className="flex flex-col items-center justify-center min-h-svh">
+      <Button>Click me</Button>
+    </div>
+  )
+}
+
+export default App
+`,
+    },
+    nextjs: {
+      setup: `npx shadcn@latest init`,
+      component: `cd aqyre-ui
+npm install aqyre-uinpx shadcn@latest add button
+`,
+      usage: `import { Button } from "@/components/ui/button"
+
+export default function Home() {
+  return (
+    <div>
+      <Button>Click me</Button>
+    </div>
+  )
+}
+`,
+    },
+    tabler: {
+      setup: `npm install @tabler/icons-react`,
+      usage: `import { IconMoodSmile } from '@tabler/icons-react';
+ 
+export default function Home() {
+  return (
+    <div>
+      <IconMoodSmile stroke={1.5} />
+    </div>
+  );
+}`,
+    },
   },
 };
