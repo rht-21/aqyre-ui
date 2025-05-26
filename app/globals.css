@@ -141,6 +141,10 @@
   .docs-section > article {
     @apply col-span-5 flex flex-col gap-4;
 
+    & div {
+      @apply flex flex-col gap-4 mb-12;
+    }
+
     & h1 {
       @apply text-3xl sm:text-4xl font-semibold mt-4;
     }
@@ -158,7 +162,7 @@
     }
 
     & p {
-      @apply text-base sm:text-lg text-muted-foreground mb-12;
+      @apply text-base sm:text-lg text-muted-foreground;
 
       & span {
         @apply font-medium text-aqyre-primary;
@@ -166,7 +170,7 @@
     }
 
     & ul {
-      @apply py-4 list-inside list-disc -space-y-6;
+      @apply py-4 list-inside list-disc space-y-8;
 
       & h4 {
         @apply inline;
